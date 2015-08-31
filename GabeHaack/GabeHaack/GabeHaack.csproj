@@ -209,9 +209,7 @@
     <Compile Include="App_Start\ReactConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Areas\Chess\ChessAreaRegistration.cs" />
-    <Compile Include="Areas\Chess\Controllers\ChessController.cs" />
-    <Compile Include="Areas\Chess\Models\ChessBoardPartialViewModel.cs" />
+    <Compile Include="Controllers\ChessController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -223,10 +221,11 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\Chess\ChessBoardPartialViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Chess\Views\Chess\Chess.cshtml" />
-    <Content Include="Areas\Chess\Views\Shared\ChessBoardPartial.cshtml" />
+    <Content Include="Views\Chess\Play.cshtml" />
+    <Content Include="Views\Chess\ChessBoardPartial.cshtml" />
     <None Include="ClearScript.V8\ClearScriptV8-32.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -248,8 +247,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Areas\Chess\Views\web.config" />
-    <Content Include="Scripts\Chess.jsx" />
+    <Content Include="Scripts\ChessBoard.jsx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -299,6 +297,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
