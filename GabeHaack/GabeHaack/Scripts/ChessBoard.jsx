@@ -9,6 +9,18 @@
 });
 
 var ChessBoard = React.createClass({
+    getInitialState: function() {
+        return {model: []}
+    },
+    componenetWillMount: function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', this.props.url, true);
+        xhr.onload = function() {
+            var model = JSON.parse(xhr.responseText);
+            this.setState({ model: model });
+        }.bind(this);
+        xhr.send();
+    },
     render: function () {
         return (
             <div className="chessBoard">
@@ -102,6 +114,6 @@ var ChessBoard = React.createClass({
 });
 
 React.render(
-    <ChessBoard />,
-    document.getElementById("chessBoard1")
+    <ChessBoard url="chess/model" />,
+    document.getElementById('chessBoard')
 );

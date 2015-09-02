@@ -5,12 +5,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace GabeHaack.Controllers
 {
     public class ChessController : Controller
     {
-        // GET: Chess/Chess
+        private ChessBoard _chessBoard { get; set; }
+
+        public ChessController()
+        {
+            _chessBoard = new ChessBoard();
+        }
+
         public ActionResult Index()
         {
             return RedirectToAction("Play");
@@ -18,13 +25,16 @@ namespace GabeHaack.Controllers
 
         public ActionResult Play()
         {
-            var chessBoard = new ChessBoard();
-            var viewModel = new ChessBoardPartialViewModel
-            {
-                Id = 1,
-                ChessBoard = chessBoard,
-            };
-            return View(viewModel);
+            return View(_chessBoard);
         }
+
+        [OutputCache(Location = OutputCacheLocation.None)]
+        public ActionResult Model()
+        {
+            return Json(_chessBoard, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult Move()
     }
 }
