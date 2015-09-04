@@ -30,10 +30,7 @@ namespace GabeHaack.Tests.Controllers
             var chessController = new ChessController();
             var result = chessController.Play() as ViewResult;
             Assert.NotNull(result.Model);
-            Assert.IsType<ChessBoardPartialViewModel>(result.Model);
-            var viewModel = (ChessBoardPartialViewModel) result.Model;
-            Assert.Equal(1, viewModel.Id);
-            Assert.NotNull(viewModel.ChessBoard);
+            Assert.IsType<Board>(result.Model);
         }
     }
 }

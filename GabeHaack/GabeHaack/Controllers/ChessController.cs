@@ -11,11 +11,11 @@ namespace GabeHaack.Controllers
 {
     public class ChessController : Controller
     {
-        private ChessBoard _chessBoard { get; set; }
+        private Board _chessBoard { get; set; }
 
         public ChessController()
         {
-            _chessBoard = new ChessBoard();
+            _chessBoard = new Board();
         }
 
         public ActionResult Index()
@@ -36,5 +36,8 @@ namespace GabeHaack.Controllers
 
         [HttpPost]
         public ActionResult Move()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

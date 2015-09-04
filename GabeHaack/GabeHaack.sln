@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GabeHaack.Tests", "GabeHaac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chess", "..\..\Chess\Chess\Chess\Chess.csproj", "{60302300-6E96-413C-B6D6-4789AD0B29BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chess.Tests", "..\..\Chess\Chess.Tests\Chess.Tests.csproj", "{FAD27401-B8D3-40CF-91BF-C4C606FF600F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{60302300-6E96-413C-B6D6-4789AD0B29BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60302300-6E96-413C-B6D6-4789AD0B29BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60302300-6E96-413C-B6D6-4789AD0B29BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD27401-B8D3-40CF-91BF-C4C606FF600F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD27401-B8D3-40CF-91BF-C4C606FF600F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD27401-B8D3-40CF-91BF-C4C606FF600F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD27401-B8D3-40CF-91BF-C4C606FF600F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
