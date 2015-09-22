@@ -1,4 +1,5 @@
-﻿using Chess.Models;
+﻿using Chess;
+using Chess.Models;
 using GabeHaack.ViewModels.Chess;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,12 @@ namespace GabeHaack.Controllers
 {
     public class ChessController : Controller
     {
-        private Board _chessBoard { get; set; }
+        private Game _game { get; set; }
 
         public ChessController()
         {
-            _chessBoard = new Board();
+            _game = new Game();
+            _game.Start();
         }
 
         public ActionResult Index()
@@ -25,13 +27,14 @@ namespace GabeHaack.Controllers
 
         public ActionResult Play()
         {
-            return View(_chessBoard);
+            return View(_game);
         }
 
         [OutputCache(Location = OutputCacheLocation.None)]
-        public ActionResult Model()
+        public ActionResult State()
         {
-            return Json(_chessBoard, JsonRequestBehavior.AllowGet);
+            var state = _game.State;
+            return Json(state, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]

@@ -12,7 +12,7 @@ var ChessBoard = React.createClass({
     getInitialState: function() {
         return {model: []}
     },
-    componenetWillMount: function() {
+    componentWillMount: function() {
         var xhr = new XMLHttpRequest();
         xhr.open('get', this.props.url, true);
         xhr.onload = function() {
@@ -114,6 +114,6 @@ var ChessBoard = React.createClass({
 });
 
 React.render(
-    <ChessBoard url="chess/model" />,
+    <ChessBoard url="chess/state" />,
     document.getElementById('chessBoard')
 );
