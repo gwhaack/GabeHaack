@@ -1,0 +1,14 @@
+{
+  "name": "GabeHaack",
+  "version": "0.0.0",
+  "description": "GabeHaack",
+  "main": "server.js",
+  "author": {
+    "name": "Gabriel",
+    "email": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3"
+  }
+}
